@@ -38,13 +38,19 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  # gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # Byebug is a Ruby debugger [https://github.com/deivid-rodriguez/byebug]
+  gem "byebug", "~> 11.1", ">= 11.1.3"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Rspec is a testing framework for Rails [https://github.com/rspec/rspec-rails]
+  gem "rspec-rails", "~> 6.1", ">= 6.1.3"
 end
 
 group :development do
